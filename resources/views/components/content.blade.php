@@ -1,7 +1,7 @@
 <div class="flex-column">
     <div class="p-2 row border ">
 
-        <div class="p-2 ">
+        <div class="p-2 div-title">
 
             @if ($demand->done)
                 <s>{{ $demand->name }}</s>

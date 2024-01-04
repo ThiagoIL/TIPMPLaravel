@@ -117,3 +117,14 @@
     top: 10px;
     right: 10px;
 }
+.div-title{
+  width: 400px; 
+  word-wrap: break-word;
+  
+}
+.div-title-modal{
+  
+  width: 470px; 
+  word-wrap: break-word;
+  
+}

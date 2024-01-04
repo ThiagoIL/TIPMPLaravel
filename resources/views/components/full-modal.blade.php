@@ -11,7 +11,7 @@
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <div class="text-wrap modal-flex form-outline mb-4">
-                        <div class="">
+                        <div class="div-title-modal">
                             <h2 class="modal-title ">{{ $demand->name }}</h2>
                         </div>
                         <div>
