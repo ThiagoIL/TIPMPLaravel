@@ -5,7 +5,7 @@
 
    <!-- The Modal -->
 <div class="modal fade" id="myInsert{{ $demand->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content d-flex">
 
             <!-- Modal Header -->

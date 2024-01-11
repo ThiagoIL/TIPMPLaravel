@@ -5,7 +5,7 @@
 
         <div class="container mt-5" >
             <div class="row justify-content-center">
-                <div class="col-md-6" style="margin-top: 20%">
+                <div class="col-md-5" style="margin-top: 25%">
                     <div class="card">
                         <div class="card-header text-center"><h2> TIPMP Login </h2></div>
         
