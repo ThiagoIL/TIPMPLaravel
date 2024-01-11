@@ -1,4 +1,11 @@
-<a href="{{ route('logout') }}"><button class="btn btn-danger logout-button">Sair</button></a>
+<div class="dropdown">
+    <button class=" btn btn-light dropdown-toggle logout-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" ><i class="bi bi-person-circle"></i></button>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><h5 class="dropdown-item" >Ola, {{Auth::user()->name}}</h5></li>
+        <li><a class="dropdown-item" href="{{ route('logout') }}"><button class="btn btn-danger"> sair </button></a></li>
+      </ul>
+</div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
