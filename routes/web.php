@@ -19,22 +19,22 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::middleware('guest')->group(function(){
+    Route::get('/login', [LoginController::class, 'login'])->name('login');
+});
+
 Route::post('/auth', [LoginController::class, 'authenticate'])->name('auth');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-    
 
-
-
-Route::get('/home', [DemandsController::class, 'index'])->name('index');
-Route::get('/done', [DemandsController::class, 'listDone'])->name('done');
-Route::get('/priority', [DemandsController::class, 'priority'])->name('priority');
-Route::post('/add', [DemandsController::class, 'add'])->name('add');
-Route::get('/delete/{id}', [DemandsController::class, 'delete'])->name('delete');
-Route::get('/edit/{id}', [DemandsController::class, 'edit'])->name('edit');
-Route::post('/update', [DemandsController::class, 'update'])->name('update');
-Route::get('/done/{id}', [DemandsController::class, 'runDone'])->name('make_done');
+    Route::get('/home', [DemandsController::class, 'index'])->name('index');
+    Route::get('/done', [DemandsController::class, 'listDone'])->name('done');
+    Route::get('/priority', [DemandsController::class, 'priority'])->name('priority');
+    Route::post('/add', [DemandsController::class, 'add'])->name('add');
+    Route::get('/delete/{id}', [DemandsController::class, 'delete'])->name('delete');
+    Route::get('/edit/{id}', [DemandsController::class, 'edit'])->name('edit');
+    Route::post('/update', [DemandsController::class, 'update'])->name('update');
+    Route::get('/done/{id}', [DemandsController::class, 'runDone'])->name('make_done');
 
 });
