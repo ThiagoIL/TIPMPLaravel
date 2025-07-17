@@ -17,8 +17,10 @@
                     <div>
                         @if (!$demand->done)
                             <p class="form-label text-left">Criado em: {{ $demand->created_at->formatLocalized('%d/%m/%Y às %H:%M:%S') }}</p>
+                            <p class="form-label text-left">ID da Tarefa: {{ $demand->id }}</p>
                         @else
                             <p class="form-label text-left">Finalizado em: {{ $demand->updated_at->formatLocalized('%d/%m/%Y às %H:%M:%S') }}</p>
+                            <p class="form-label text-left">ID da Tarefa: {{ $demand->id }}</p>
                         @endif
                     </div>
                 </div>
